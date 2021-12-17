@@ -2901,9 +2901,9 @@ var requiredItemOpen = false;
         }
         var type = "Used 1x";
         if (data.type == "add") {
-            type = "Received 1x";
+            type = "Received " + data.amount + "x";
         } else if (data.type == "remove") {
-            type = "Removed 1x";
+            type = "Remove " + data.amount + "x";
         }
 
         var $itembox = $(".itembox-container.template").clone();

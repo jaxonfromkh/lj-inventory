@@ -279,11 +279,12 @@ RegisterNetEvent('weapons:client:SetCurrentWeapon', function(data, bool)
     end
 end)
 
-RegisterNetEvent('inventory:client:ItemBox', function(itemData, type)
+RegisterNetEvent('inventory:client:ItemBox', function(itemData, type, amount)
     SendNUIMessage({
         action = "itemBox",
         item = itemData,
-        type = type
+        type = type,
+        amount = amount
     })
 end)
 
